@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <div class="cloud"></div>
+
+        <div class="drops"></div>
+
+    </div>
+
+    <script>
+
+         
+
+     function rainingFx(){
+
+        const cloud=document.querySelector('.cloud');
+
+         const drop=document.createElement('div');
+
+         
+
+         const l=Math.floor(Math.random()*310);
+
+         const w=Math.random()*5;
+
+         const h=Math.random()*25;
+
+         const animeDuration=Math.random()*0.5;
+
+
+
+         drop.style.left=l+'px';
+
+         drop.style.width=w+0.5+'px';
+
+         drop.style.height=h+0.01+'px'; 
+
+         drop.style.animationDuration=0.9+animeDuration+'s';
+
+         
+
+
+
+
+
+
+
+        drop.classList.add("drops");
+
+        cloud.appendChild(drop);
+
+        setTimeout(function () {
+
+            cloud.removeChild(drop)
+
+        },2000);
+
+    }
+
+        
+
+        setInterval(function(){
+
+            rainingFx()
+
+        },20);
+
+       
+
+
+
+    </script>
+
+    
+
+</body>
+
+</html
